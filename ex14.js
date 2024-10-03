@@ -5,4 +5,18 @@
 const cart = createCart();
 cart.addItem("apple");
 cart.addItem("banana");
+
+function createCart(){
+      return {
+            items: [],
+            addItem: function(item) {
+                  this.items.push(item)
+            },
+            getItems: function() {
+                  return this.items
+            }
+      }
+}
+
+
 console.log(cart.getItems()); // Expected output: ["apple", "banana"]
